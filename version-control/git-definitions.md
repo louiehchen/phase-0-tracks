@@ -10,3 +10,6 @@ Branches are movable pointers to different commits. They let you move around to 
 A commit is the act of making a change permanent. You often want to include a commit message as a comment on what you actually changed from the previous iteration of the file or program. 
 * What is a merge conflict?
 A merge conflict occurs when there is an issue merging branches. A common example is when two different entities are changing the same file. 
+
+
+I'm hungry
