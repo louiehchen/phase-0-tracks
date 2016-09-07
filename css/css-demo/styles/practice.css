@@ -11,3 +11,13 @@
 ul.smaller {
 	font-size:  .8em;
 }
+/* Cascading means that styles can fall from one style sheet to another, meaning you can use multiple 
+stylesheets in one html page. When conflicts occur, CSS determines which to use by a number of factors including 
+source order, specificity, and number of selectors involved. "Weight" can also overrule other rules of inheritance.
+*/
+
+/*A pseudo-class is used to define a special state of an element */
+li:hover {
+	color:#FF00FF;
+
+}
