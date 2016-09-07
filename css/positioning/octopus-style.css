@@ -3,9 +3,9 @@
 }
 #octopus {
 	position: absolute;
-	margin-left: auto;
+	margin-left: 500px;
 	margin-top: 200px;
-	margin-right: auto;
+	margin-right: 500px;
 	display: block;
 	z-index: -1;
 }
