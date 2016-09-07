@@ -4,6 +4,7 @@
 #octopus {
 	position: absolute;
 	margin: auto;
+	display: block;
 	z-index: -1;
 }
 #hat {
