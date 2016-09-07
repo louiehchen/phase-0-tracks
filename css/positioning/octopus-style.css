@@ -3,9 +3,7 @@
 }
 #octopus {
 	position: absolute;
-	margin-right: 400px;
-	margin-left: 400px;
-	margin-top: 400px;
+	margin: auto;
 	z-index: -1;
 }
 #hat {
