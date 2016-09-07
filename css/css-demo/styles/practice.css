@@ -21,3 +21,8 @@ li:hover {
 	color:#FF00FF;
 
 }
+/* Changed it so that the list elements change colors on mouse-over */
+/* You can add a class or an ID to that specifc child element to select it */
+#background-color {
+	background-color:pink;
+}
