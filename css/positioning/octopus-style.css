@@ -4,6 +4,7 @@
 #octopus {
 	position: absolute;
 	margin-left: auto;
+	margin-top: 200px;
 	margin-right: auto;
 	display: block;
 	z-index: -1;
