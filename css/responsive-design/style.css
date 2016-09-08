@@ -12,10 +12,13 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
-  width: 200px;
-  display: inline-block;
-  vertical-align: left;
 }
+section#external-links {
+	width: 20%;
+	display: inline-block;
+	vertical-align: top;
+}
+
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
@@ -34,10 +37,39 @@ figcaption {
   text-align: right;
 }
 body {
-	width:960px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width:960px;
+	min-width: 490px;
 }
 main {
-	width:756px;
+	width: 75%;
 	display: inline-block;
-	vertical-align: right;
+	vertical-align: top;
 }
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+/*This turns the background hot pink when the display size is less than 500px */
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: .5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  section {
+    width: 100%;
+    position: absolute;
+
+  }
+  main {
+  	width: 100%;
+  	position: absolute;
+  	z-index: -1;
+  }
+}
+/* Mobile first design, since it's the hardest, should be done first */
+/* Float lets objects basically wrap around other objects, while display 
+will have more of an absolute side by side interaction. */
