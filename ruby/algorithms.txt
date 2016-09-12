@@ -1,0 +1,29 @@
+Elevator
+-press button for elevator
+	-when the doors open, go in
+	-turn around
+		-press button for which floor you want to go to
+		-wait
+	-when doors open, go out
+
+Taking a shower
+-Wait until you are dirty
+-If you are dirty
+	-Walk into bathroom
+		-Take off your clothes
+		-Open the glass door
+		-Turn the knob for the faucet
+		-Wait until the water is hot enough (100 degrees F)
+			-Step into the water
+			-Squeeze shampoo into your hand
+			-Rub the shampoo in your hair
+			-Rinse your hair
+			-Squeeze bodywash into your hand
+			-Rub the bodywash all over your body
+			-Rinse your body
+			-Turn off the water
+			-Dry yourself with a towel
+		-If the water is not enough, keep waiting
+-If you aren't dirty, keep waiting
+
+
