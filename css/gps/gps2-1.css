@@ -1,0 +1,38 @@
+header {
+  background-color:blue;
+  background-image: url("https://assets-cdn.github.com/images/modules/logos_page/Octocat.png");
+  background-position: right bottom;
+  
+  }
+ body {
+   max-width:960px;
+  
+   
+ } 
+ .column-1,.column-2 {
+  float:left;
+  width: 300px;
+  padding: 10px;
+  
+}
+.column-1 {
+  background-color: yellow;
+  font-family: georgia;
+  font-size: 24px; 
+  color: red;
+}
+.column-2 {
+  background-color: red;
+  font-family: verdana;
+  font-weight: bold;
+  color: yellow;
+}
+footer {
+  background-color: blue;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  clear:both;
+}
