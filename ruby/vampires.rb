@@ -15,34 +15,32 @@ until employees == 0
 	health = gets.chomp
 	puts "Do you have any allergies (Y/N)?"
 	allergies = gets.chomp
-		
-	
-	
+		if allergies == "Y"
+			user_input = ""
+			until user_input == "Done" || user_input == "Sunshine"
+			puts "List an allergy you have, type 'Done' when you're finished"
+			user_input = gets.chomp
+			end
+		end
 
 	current_year = 2016
-	
+
 	if name == "Drake Cula" || name == "Tu Fang"
 		result = "Definitely a vampire"
+	elsif user_input == "Sunshine"
+		result = "Probably a vampire."
+	elsif (age != current_year - year && bread == "N" && health == "N")
+		result = "Almost certainly a vampire"
 	elsif (age == current_year - year && (bread == "Y" || health == "Y"))
 		result = "Probably not a vampire"
 	elsif (age != current_year- year && (bread == "N" || health == "N"))
 		result = "Probably a vampire"
-	elsif (age != current_year - year && bread == "N" && health == "N")
-		result = "Almost certainly a vampire"
-	elsif allergies == "Y"
-			user_input = ""
-			while user_input != "Done"
-			puts "List an allergy you have, type 'Done' when you're finished"
-			user_input = gets.chomp
-			end
-			if user_input = "Sunshine"
-				result = "Probably a vampire"
-			end
 	else
 		result = "Results inconclusive"
 
 	end
 	puts result
-	employees = employees - 1	
+	employees = employees - 1
+
 end
-puts "Actually, nevermind! What do these questions have to do with anything? Let's all be friends."
+	puts "Actually, nevermind! What do these questions have to do with anything? Let's all be friends."
