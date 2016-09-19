@@ -38,4 +38,4 @@
 # (What is the significance of the number 122 in relation to the character z?) .ord returns the integer ordinal of a one character string
 
 "How many times does the letter 'a' appear in this string?".count "a"
-# => 4
+# => 4sybk s
