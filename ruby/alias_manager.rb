@@ -50,7 +50,7 @@ end
 # Will return "Vussit Gimodoe"
 
 # Here, the user will interface with the program
- def interface
+ def alias_manager
  	alias_list = {}
 
  	puts "Let's begin, press Enter to continue, type 'Quit' to quit"
@@ -79,4 +79,4 @@ end
 	alias_list.each_pair {|full_name, new_name| puts "#{full_name}, your code name is #{new_name}"}
 end
 
-interface
+alias_manager
