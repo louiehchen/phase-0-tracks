@@ -1,14 +1,20 @@
 # Virus Predictor
 
 # I worked on this challenge [by myself, with: Shana Hagood].
-# We spent [#] hours on this challenge.
+# We spent [2] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
-require_relative 'state_data'
-# It allows us to access the info on the state_data file. Require relative works when the file to be accessed is in the same directory.
+#It allows us to access the info on the state_data file. Require relative works when the file to be accessed is in the same directory.
 # It differs from require in that it only draws code from your local file path. 
+
+
+=begin For each state it gives us the key/value pairs for population and population. 
+It's a nested data structure that contains several hashes inside of one big hash, hence "hashy hash" .
+STATE_DATA is a constant variable, as denoted by its ALL_CAPS description, but it doesn't start with a $.
+
+=end
+require_relative 'state_data'
+
 class VirusPredictor
 # Initializes the state of origin, population density, population arguments
   attr_reader :population_density, :population
@@ -91,3 +97,21 @@ STATE_DATA.each do |state, population|
 end
 #=======================================================================
 # Reflection Section
+=begin 
+What are the differences between the two different hash syntaxes shown in the state_data file?
+The first one uses a hash rocket to set the value of the key string. 
+The nested hash uses colon to set the value.
+
+What does require_relative do? How is it different from require?
+Calls upon the file in the current directory
+Require_relative is local, require is global.
+
+What are some ways to iterate through a hash?
+loop, each, do 
+
+When refactoring virus_effects, what stood out to you about the variables, if anything?
+I guess refactoring hates instance variables
+
+What concept did you most solidify in this challenge?
+I learned a lot about what actually happens when you call different elements in a hash and how to specifically call them. 
+=end
