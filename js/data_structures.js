@@ -14,6 +14,11 @@ for (i = 0; i<names.length; i++){
 	horse[names[i]] = colors[i];
 }
 console.log(horse);
+for (var name in horse){
+	if (horse.hasOwnProperty(name)){
+		console.log("This horse is named " + name + " and it is " + horse[name]);
+	};
+};
 // car constructor
 function Car(year, make, model){
 
@@ -32,3 +37,7 @@ var newerCar = new Car(2004, "Honda", "Element");
 console.log(newerCar);
 var dreamCar = new Car(1969, "Ford", "Mustang");
 console.log(dreamCar);
+console.log(dreamCar.year);
+
+
+// Don't have to bother with attr_reader/accessor in javascript constructors, but calling individual instances is more tedious.
