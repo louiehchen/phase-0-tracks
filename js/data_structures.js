@@ -14,3 +14,20 @@ for (i = 0; i<names.length; i++){
 	horse[names[i]] = colors[i];
 }
 console.log(horse);
+// car constructor
+function Car(year, make, model){
+
+	this.year = year;
+	this.make = make;
+	this.model = model;
+	this.honk = function() { console.log("BEEPBEEP"); };
+	console.log("Car initialization complete");
+
+}
+console.log("Let's build a car...");
+var newCar = new Car(2015, "Acura", "TLX");
+console.log(newCar);
+newCar.honk();
+var newerCar = new Car(2004, "Honda", "Element");
+console.log(newCar);
+var dreamCar = new Car(1969, "Ford", "Mustang");
