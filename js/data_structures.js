@@ -29,5 +29,6 @@ var newCar = new Car(2015, "Acura", "TLX");
 console.log(newCar);
 newCar.honk();
 var newerCar = new Car(2004, "Honda", "Element");
-console.log(newCar);
+console.log(newerCar);
 var dreamCar = new Car(1969, "Ford", "Mustang");
+console.log(dreamCar);
