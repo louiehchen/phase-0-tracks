@@ -1,5 +1,5 @@
 // Return longest word/phrase in array
-
+// Go through the array and check words vs each other
 
 
 function longestWord(arr) {
@@ -20,7 +20,10 @@ console.log("The longest word is: " + longestWord(array2)); // biggest
 
 var array3 = ["inch", "meter", "kilometer"];
 console.log("The longest word is: " + longestWord(array3)); // kilometer
+
 // Take two objects and check to see if they share at least one key-value pair
+// Loop through the two objects and check their keys and values
+// If anything matches, return true, else, return false
 
 function matchObjects(object1, object2) {
 	for (var key in object1) {
