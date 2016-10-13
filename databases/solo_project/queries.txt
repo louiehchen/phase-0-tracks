@@ -1,0 +1,11 @@
+SELECT * FROM units;
+
+UPDATE units SET hitpoints=40 WHERE name="Probe";
+
+SELECT * FROM units, race WHERE units.race_id = race.id;
+
+SELECT units.name, race.race FROM units JOIN race ON units.race_id = race.id;
+
+DELETE FROM units WHERE name="Hydralisk";
+
+SELECT units.name, units.attack_air, race.race FROM units LEFT JOIN race ON units.race_id = race.id;
