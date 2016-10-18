@@ -6,7 +6,7 @@ db = SQLite3::Database.new("rollcall.db")
 db.results_as_hash = true
 
 # create table
-create_table_cmd = <<-SQL 
+create_table_cmd = <<-SQL
 	CREATE TABLE IF NOT EXISTS roll_sheet (
 	id INTEGER PRIMARY KEY,
 	first_name VARCHAR(255),
@@ -15,37 +15,37 @@ create_table_cmd = <<-SQL
 	)
 SQL
 
-# insert/add new student to the roll_sheet table
+# SQL insert/add new student to the roll_sheet table
 insert_table_cmd = <<-SQL
 	INSERT INTO roll_sheet (first_name, last_name, present) VALUES (?, ?, 0)
 SQL 
 
-# remove student from roll_sheet
-delete_item_cmd = <<-SQL
+# SQL remove student from roll_sheet
+remove_student_cmd = <<-SQL
 	DELETE FROM roll_sheet WHERE id = ?
 SQL 
 
-# mark student present or absent
-update_item_cmd = <<-SQL 
+# SQL mark student present or absent
+update_attendance_cmd = <<-SQL 
 	UPDATE roll_sheet SET present = 1 WHERE id = ?
 SQL 
 
-# method to add student to roll_sheet
+# ruby method to add student to roll_sheet
 def add_student(db, insert_table_cmd, first_name, last_name)
 	db.execute(insert_table_cmd, [first_name, last_name])
 end
 
-# method to remove student from roll_sheet
-def delete_student(db, delete_item_cmd, id)
-	db.execute(delete_item_cmd, id)
+# ruby method to remove student from roll_sheet
+def remove_student(db, remove_student_cmd, id)
+	db.execute(remove_student_cmd, id)
 end
 
-# method to mark student absent 
-def update_attendance(db, update_item_cmd, id)
-	db.execute(update_item_cmd, id)
+# ruby method to mark student absent 
+def update_attendance(db, update_attendance_cmd, id)
+	db.execute(update_attendance_cmd, id)
 end 
 
-# print roll_sheet
+# ruby print roll_sheet
 def print_roll(db)
 	roll = db.execute("SELECT * FROM roll_sheet")
 	roll.each do |student|
@@ -58,7 +58,7 @@ def print_roll(db)
 	end
 end
 
-# method to create table
+# ruby method to create table
 db.execute(create_table_cmd)
 
 # INTERFACE
@@ -84,7 +84,7 @@ until valid_input
 		print_roll(db)
 		puts "Input the ID number of the student you wish to remove from your class:"
 		id = gets.chomp.to_i
-		delete_student(db, delete_item_cmd, id)
+		remove_student(db, remove_student_cmd, id)
 		puts "Student removed from class"
 		print_roll(db)
 	elsif input == "c"
@@ -93,7 +93,7 @@ until valid_input
 		print_roll(db)
 		puts "Input the ID number of the student you wish to mark absent:"
 		id = gets.chomp.to_i
-		update_attendance(db, update_item_cmd, id)
+		update_attendance(db, update_attendance_cmd, id)
 		puts "Student marked absent"
 		print_roll(db)
 	elsif input == "d"
