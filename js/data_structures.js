@@ -10,7 +10,7 @@ names.push("Fred");
 // add color and name to horse
 var horse = {};
 
-for (i = 0; i<names.length; i++){
+for (var i = 0; i < names.length; i++){
 	horse[names[i]] = colors[i];
 }
 console.log(horse);
