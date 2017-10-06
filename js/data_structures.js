@@ -6,7 +6,7 @@ var names = ["Bob", "Joe", "Tom", "Tim"];
 // add to color array
 colors.push("orange");
 // add to name array
-names.push("Gerald");
+names.push("Fred");
 // add color and name to horse
 var horse = {};
 
